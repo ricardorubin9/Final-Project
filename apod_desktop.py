@@ -1,4 +1,5 @@
 """ 
+Team: Joelle Waugh, Manuel Manrique Lopez, Ricardo Rubin.
 COMP 593 - Final Project
 
 Description: 
@@ -69,7 +70,7 @@ def get_apod_date():
         # {REQ-4}
         print ("No date parameter")
         apod_date = datetime.datetime.fromisoformat(str(date_now))
-        print(f"No date parameter. Considerer date today. apod_date:{apod_date}")
+        print(f"No date parameter. Considerate date today. apod_date:{apod_date}")
         return apod_date   
     elif ((date_in[4] !="-") or (date_in[7]!= "-") or len(date_in) < 10): 
         print ("Invalid Date format (yyyy-mm-dd)")
@@ -242,8 +243,7 @@ def add_apod_to_db(title, explanation, typeIma, file_path, sha256):
           )
           VALUES (?, ?, ?, ?, ?);
     """
-    title, explanation, typeIma, file_path, sha256
-
+  
     new_image = (
                 title,
                 explanation,
