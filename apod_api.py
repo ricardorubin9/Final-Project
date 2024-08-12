@@ -10,7 +10,7 @@ NASA_API_URL = 'https://api.nasa.gov/planetary/apod/'
 #https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 parameters = {
-      "api_key": "3L2Opq58DSqlyMQcb1Q9yoFh8vILAbXFehb0pqnK"
+      "api_key": "Api_KEY"
 }
 
 apod_info_dict = {
