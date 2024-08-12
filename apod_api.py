@@ -86,6 +86,7 @@ def get_apod_image_url(apod_info_dict):
            results = resp_msg.json()
            print(results)
            print(f"titulo:{results['title']}")
+           tit_aux =cleanTitle(results['title'])
            url2 = results["url"]
            # Check if is an image
            print(results["media_type"])
