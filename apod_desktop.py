@@ -202,13 +202,10 @@ def add_apod_to_cache(apod_date):
     v_expla = info_dict['explanation']
     v_type = info_dict['media_type']
     v_file_p = info_dict['url']
-    if v_type == "video":
-        v_title = v_title
-    #v_hash1 = v_file_p + 
-    #v_sha256 = hash(info_dict[''])
+    sha256 = "Value of sha256"
     print("Valores extraidos del APOD image:")
     print(f"titulo:{v_title2}\n explicacion:{v_expla}\n tipo:{v_type}\n ruta:{v_file_p}")
-    #add_apod_to_db(title, explanation, typeIma, file_path, sha256)
+    add_apod_to_db(v_title2, v_expla, v_type, v_file_p, sha256)
     return 0 
 
 def add_apod_to_db(title, explanation, typeIma, file_path, sha256):
