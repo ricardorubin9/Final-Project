@@ -10,7 +10,7 @@ NASA_API_URL = 'https://api.nasa.gov/planetary/apod/'
 #https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 parameters = {
-      "api_key": "DEMO_KEY"
+      "api_key": "3L2Opq58DSqlyMQcb1Q9yoFh8vILAbXFehb0pqnK"
 }
 
 apod_info_dict = {
@@ -76,11 +76,11 @@ def get_apod_image_url(apod_info_dict):
     """
     # TODO: Complete the function body
     # Hint: The APOD info dictionary includes a key named 'media_type' that indicates whether the APOD is an image or video
-    v_date="2023-15-27"
+    v_date="2023-10-27"
     #url = NASA_API_URL + v_date
     url = NASA_API_URL 
     resp_msg = requests.get(url, params=parameters)
-    print (resp_msg.url)
+    # print (resp_msg.url)
     #Check if request was successful
     if resp_msg.status_code == requests.codes.ok:
            results = resp_msg.json()
