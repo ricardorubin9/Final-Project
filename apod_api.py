@@ -91,7 +91,8 @@ def get_apod_image_url(apod_info_dict):
            # Check if is an image
            print(results["media_type"])
            if results["media_type"] == "image":
-               with open("nasa_apod.jpg", "wb") as f:
+               titaux= tit_aux + ".jpg"  
+               with open(titaux, "wb") as f:
                    f.write(requests.get(url2).content)
            else:
                # Extract binay content from response message body
