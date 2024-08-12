@@ -62,6 +62,7 @@ def get_apod_date():
     # Hint: The following line of code shows how to convert and ISO-formatted date string to a date object
     print("funcion:get_apod_date")
     # {REQ-1}
+    date_in = ''
     date_in = input("Give a date:(yyyy-mm-dd)")
     #date_in="2024-05-18"
     date_now= datetime.datetime.today() 
