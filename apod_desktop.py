@@ -202,7 +202,7 @@ def add_apod_to_cache(apod_date):
     v_type = info_dict['media_type']
     v_file_p = info_dict['url']
     if v_type == "video":
-        v_title = v_title+".wav"
+        v_title = v_title
     #v_hash1 = v_file_p + 
     #v_sha256 = hash(info_dict[''])
     print("Valores extraidos del APOD image:")
