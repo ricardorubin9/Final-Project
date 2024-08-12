@@ -85,13 +85,14 @@ def get_apod_image_url(apod_info_dict):
     if resp_msg.status_code == requests.codes.ok:
            results = resp_msg.json()
            print(results)
-           print(f"titulo:{results['title']}")
+   #        print(f"titulo:{results['title']}")
            tit_aux =cleanTitle(results['title'])
            url2 = results["url"]
            # Check if is an image
            print(results["media_type"])
            if results["media_type"] == "image":
                titaux= tit_aux + ".jpg"  
+               print (f"title:{titaux}")
                with open(titaux, "wb") as f:
                    f.write(requests.get(url2).content)
            else:
