@@ -180,7 +180,7 @@ def add_apod_to_cache(apod_date):
     print("APOD date:", apod_date.isoformat())
     # TODO: Download the APOD information from the NASA API
     # Hint: Use a function from apod_api.py 
-    info_dict=apod_api.get_apod_image_url('2024-05-18')
+    info_dict=apod_api.get_apod_image_url(apod_date)
     print(info_dict)
     #get_apod_info(apod_date)
 
