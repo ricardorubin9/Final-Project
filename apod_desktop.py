@@ -154,7 +154,7 @@ def init_apod_cache():
                title        TEXT NOT NULL,
                explanation  TEXT,
                filepath     TEXT NOT NULL,
-               type         TEXT NOT NULL,
+               tipo         TEXT NOT NULL,
                sha256       TEXT NOT NULL
            );
            """
@@ -208,7 +208,7 @@ def add_apod_to_cache(apod_date):
     add_apod_to_db(v_title2, v_expla, v_type, v_file_p, sha256)
     return 0 
 
-def add_apod_to_db(title, explanation, typeIma, file_path, sha256):
+def add_apod_to_db(title, explanation, tipo, file_path, sha256):
     """Adds specified APOD information to the image cache DB.
      
     Args:
@@ -233,11 +233,11 @@ def add_apod_to_db(title, explanation, typeIma, file_path, sha256):
     add_image_query = """
           INSERT INTO ImagesCache
           (
-              tituloIma,
-              explanationIma,
-              filepathIma,
-              typeIma,
-              sha256Ima
+              titulo,
+              explanation,
+              filepath,
+              tipo,
+              sha256
           )
           VALUES (?, ?, ?, ?, ?);
     """
@@ -245,7 +245,7 @@ def add_apod_to_db(title, explanation, typeIma, file_path, sha256):
     new_image = (
                 title,
                 explanation,
-                typeIma,
+                tipo,
                 file_path,
                 sha256
             )
